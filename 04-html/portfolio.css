@@ -1,0 +1,27 @@
+header{
+    text-align: center;
+    background-color: #A3B3FF;
+}
+nav{
+    ul{
+        text-align: left;
+    }
+}
+
+#about{
+    background-color: #FFE4E6;
+    text-align: center;
+    h3{
+        text-align: left;
+    }
+    ul{
+        text-align: left;
+    }
+}
+#projects{
+    background-color: #FFEDD4;
+    text-align: center;
+}
+#contact{
+    background-color: #CEFAFE;
+}
