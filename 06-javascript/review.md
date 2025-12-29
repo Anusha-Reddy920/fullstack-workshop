@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 11:40
+**Review Date:** 2025-12-29 13:15
 
 ---
 
@@ -13,69 +13,69 @@
 
 📄 **counter.html**
    Path: `06-javascript/challenge-01/counter.html`
-   Lines: 30
+   Lines: 34
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Uses semantic HTML5 tags
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
-   **Score: 4/5**
+   **Score: 5/5**
 
 📄 **counter.js**
    Path: `06-javascript/challenge-01/counter.js`
-   Lines: 67
+   Lines: 55
 
     - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
+    - ✅ Uses arrow functions
 
-   **Score: 2/5**
+   **Score: 3/5**
 
 📄 **form-validator.html**
    Path: `06-javascript/challenge-01/form-validator.html`
-   Lines: 47
+   Lines: 58
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Uses semantic HTML5 tags
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
-   **Score: 4/5**
+   **Score: 5/5**
 
 📄 **form-validator.js**
    Path: `06-javascript/challenge-01/form-validator.js`
-   Lines: 92
+   Lines: 82
 
-    - ❌ Uses `var` (2 times) - use `let`/`const`
+    - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
+    - ✅ Uses arrow functions
 
-   **Score: 1/5**
+   **Score: 3/5**
 
 📄 **password-validator.html**
    Path: `06-javascript/challenge-01/password-validator.html`
-   Lines: 49
+   Lines: 62
 
     - ✅ Has `<!DOCTYPE html>`
-    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Uses semantic HTML5 tags
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
-   **Score: 4/5**
+   **Score: 5/5**
 
 📄 **password-validator.js**
    Path: `06-javascript/challenge-01/password-validator.js`
-   Lines: 179
+   Lines: 125
 
-    - ❌ Uses `var` (2 times) - use `let`/`const`
+    - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
+    - ✅ Uses arrow functions
     - ✅ Uses template literals
 
-   **Score: 2/5**
+   **Score: 4/5**
 
-### Topic Score: 17 / 30 (56%)
+### Topic Score: 25 / 30 (83%)
 
 ---
 
