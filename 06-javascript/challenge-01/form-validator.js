@@ -47,7 +47,7 @@ const Password1 = document.getElementById("pwd");
 const p3 = document.getElementById("pwdV");
 Password1.addEventListener("blur",function(){
     var pwd_v3 = Password1.value;
-    const regex = /^(?=.[A-Z])(?=.\d)(?=.[!@#$%&])[A-Za-z\d!@#$%&*]{8,}$/;
+    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*])[A-Za-z\d!@#$%&*]{8,}$/;
       pwdV.style.color = 'red';
     if(regex.test(pwd_v3)){
         console.log("password entered");
