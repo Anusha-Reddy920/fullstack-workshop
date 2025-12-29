@@ -1,7 +1,7 @@
 # Review: 04-html
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 10:51
+**Review Date:** 2025-12-29 10:56
 
 ---
 
@@ -27,6 +27,9 @@
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
+   **Score: 5/5**
+
+### Topic Score: 5 / 5 (100%)
 
 ---
 

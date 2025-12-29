@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 10:51
+**Review Date:** 2025-12-29 10:56
 
 ---
 
@@ -20,6 +20,7 @@
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
+   **Score: 4/5**
 
 📄 **counter.js**
    Path: `06-javascript/challenge-01/counter.js`
@@ -29,6 +30,7 @@
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
 
+   **Score: 2/5**
 
 📄 **form-validator.html**
    Path: `06-javascript/challenge-01/form-validator.html`
@@ -39,6 +41,7 @@
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
 
+   **Score: 4/5**
 
 📄 **form-validator.js**
    Path: `06-javascript/challenge-01/form-validator.js`
@@ -48,6 +51,9 @@
     - ✅ Uses strict equality (`===`)
     - 💡 Consider using arrow functions
 
+   **Score: 1/5**
+
+### Topic Score: 11 / 20 (55%)
 
 ---
 

@@ -1,7 +1,7 @@
 # Review: 01-linux
 
 **Exercise:**  Exercise: Log File Analyzer Script
-**Review Date:** 2025-12-29 10:51
+**Review Date:** 2025-12-29 10:56
 
 ---
 
@@ -25,6 +25,7 @@
     - 💡 Consider adding more comments
     - 💡 Consider quoting variables to handle spaces
 
+   **Score: 0/5**
 
 📄 **log-analyzer.sh**
    Path: `01-linux/log-analyzer.sh`
@@ -36,6 +37,9 @@
     - 💡 Consider adding more comments
     - ✅ Variables are properly quoted
 
+   **Score: 2/5**
+
+### Topic Score: 2 / 10 (20%)
 
 ### Technical Checklist
 
