@@ -1,180 +1,125 @@
-let isUserValid=false;
-let isEmailValid=false;
-let isPasswordValid=false;
-let isConfirmValid=false;
+let isUserValid = false;
+let isEmailValid = false;
+let isPasswordValid = false;
+let isConfirmValid = false;
 
+// Elements
+const userInput = document.getElementById("user");
+const emailInput = document.getElementById("email");
+const pwdInput = document.getElementById("pwd1");
+const confirmPwdInput = document.getElementById("confirm-pwd");
 
-const user1 = document.getElementById("user");
-const p1 = document.getElementById("userV");
-user1.addEventListener("blur",function(){
- const user_V1 = user1.value;
- const regex =  /^[a-zA-Z0-9]{3,15}$/;
- userV.style.color = 'red';
- if(regex.test(user_V1)){
-     console.log("its right");  
-       isUserValid=true;
-    }else{
-     p1.textContent = 'username must be 3-15 characters (letters & numbers only)';
-    console.log(p1.textContent);
-      isUserValid=false;
- }
-   checkFormValidity();
-    console.log(user_V1);
+const userMsg = document.getElementById("userV");
+const emailMsg = document.getElementById("emailV");
+const pwdMsg = document.getElementById("pwdV");
+const confirmMsg = document.getElementById("conpwdV");
+const scoreMsg = document.getElementById("password_score");
+const errorMsg = document.getElementById("invalid_user");
+
+// Username
+userInput.addEventListener("blur", () => {
+    const regex = /^[a-zA-Z0-9]{3,15}$/;
+
+    if (regex.test(userInput.value)) {
+        userMsg.textContent = "";
+        isUserValid = true;
+    } else {
+        userMsg.textContent =
+            "Username must be 3–15 characters (letters & numbers only)";
+        isUserValid = false;
+    }
+    checkFormValidity();
 });
-   
 
-
-const Email1 = document.getElementById("email");
-const p2 = document.getElementById("emailV");
-Email1.addEventListener("blur",function(){
-    const email_v2 = Email1.value;
+// Email
+emailInput.addEventListener("blur", () => {
     const regex = /^[a-z0-9._%-]+@[a-z]+\.[a-z]{2,}$/;
-     emailV.style.color = 'red';
-    if(regex.test(email_v2)){
-        console.log("right email format");
-         isEmailValid=true;
-       
-    }else{
-         p2.textContent = 'invalid eamil address';
-        console.log(p2.textContent);
-         isEmailValid=false;
+
+    if (regex.test(emailInput.value)) {
+        emailMsg.textContent = "";
+        isEmailValid = true;
+    } else {
+        emailMsg.textContent = "Invalid email address";
+        isEmailValid = false;
     }
-     checkFormValidity();
-    console.log(email_v2);
+    checkFormValidity();
 });
 
-const Password1 = document.getElementById("pwd1");
-const p3 = document.getElementById("pwdV");
-Password1.addEventListener("input",function(){
-    let pwd = document.getElementById("pwd1").value;
-    let result = validatePassword(pwd);
-    document.getElementById("password_score").innerHTML=`Strength: ${result.score}/100`;
-    var pwd_v3 = Password1.value;
-    // const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*])[A-Za-z\d!@#$%&*]{8,}$/;
-      pwdV.style.color = 'red';
-    if(result.isValid){
-        p3.style.color = "green";
-        p3.innerText = "Strong password";
-        console.log("password entered");
-        isPasswordValid=true;
-    }else{
-        //  p3.textContent = 'password must be 8+ chars, including uppercase, lowercase & number';
-        document.getElementById("invalid_user").innerHTML = result.errors.join(", ");
-        console.log(p3.textContent);
-        isPasswordValid=false;
+// Password
+pwdInput.addEventListener("input", () => {
+    const pwd = pwdInput.value;
+    const result = validatePassword(pwd);
+
+    scoreMsg.textContent = `Strength: ${result.score}/100`;
+
+    if (result.isValid) {
+        pwdMsg.textContent = "Strong password ✅";
+        pwdMsg.style.color = "green";
+        errorMsg.textContent = "";
+        isPasswordValid = true;
+    } else {
+        pwdMsg.textContent = "";
+        errorMsg.textContent = result.errors.join(", ");
+        isPasswordValid = false;
     }
-     checkFormValidity();
-    console.log(pwd_v3);
+    checkFormValidity();
 });
 
-const conpwd1 = document.getElementById("confirm-pwd");
-const p4 = document.getElementById("conpwdV");
-conpwd1.addEventListener("blur",function(){
-    const Password1 = document.getElementById("pwd1");
-     var pwd_v3 = Password1.value;
-    const con_pwd_v4 = conpwd1.value;
-     conpwdV.style.color = 'red';
-    if(pwd_v3 === con_pwd_v4){      
-        console.log("perfect");
-         isConfirmValid=true;
-    }else{
-          p4.textContent = 'Password and confirm password do not match';
-        console.log(p4.textContent);
-         isConfirmValid=false;
+// Confirm Password
+confirmPwdInput.addEventListener("blur", () => {
+    if (pwdInput.value === confirmPwdInput.value) {
+        confirmMsg.textContent = "";
+        isConfirmValid = true;
+    } else {
+        confirmMsg.textContent = "Passwords do not match";
+        isConfirmValid = false;
     }
-     checkFormValidity();
-    console.log(con_pwd_v4);
+    checkFormValidity();
 });
 
-function validatePassword(pwd) {
+// Password validation logic
+const validatePassword = (pwd) => {
     let score = 0;
     let errors = [];
-    let suggestions = [];
 
     const commonPasswords = ["password", "123456", "qwerty", "admin", "letmein"];
 
-    // Length check
-    if (pwd.length >= 8) {
-        score += 20;
-    } else {
-        errors.push("Too short (min 8 characters)");
-        suggestions.push("Increase password length");
-    }
+    if (pwd.length >= 8) score += 20;
+    else errors.push("Too short (min 8 characters)");
 
-    if (pwd.length >= 12) {
-        score += 10;
-    }
+    if (pwd.length >= 12) score += 10;
+    if (/[A-Z]/.test(pwd)) score += 15;
+    else errors.push("No uppercase letter");
 
-    // Uppercase
-    if (/[A-Z]/.test(pwd)) {
-        score += 15;
-    } else {
-        errors.push("No uppercase letter");
-        suggestions.push("Add an uppercase letter");
-    }
+    if (/[a-z]/.test(pwd)) score += 15;
+    else errors.push("No lowercase letter");
 
-    // Lowercase
-    if (/[a-z]/.test(pwd)) {
-        score += 15;
-    } else {
-        errors.push("No lowercase letter");
-        suggestions.push("Add a lowercase letter");
-    }
+    if (/\d/.test(pwd)) score += 15;
+    else errors.push("No number");
 
-    // Number
-    if (/\d/.test(pwd)) {
-        score += 15;
-    } else {
-        errors.push("No number");
-        suggestions.push("Add a number");
-    }
+    if (/[!@#$%^&*()_+\-=]/.test(pwd)) score += 15;
+    else errors.push("No special character");
 
-    // Special character
-    if (/[!@#$%^&*()_+\-=]/.test(pwd)) {
-        score += 15;
-    } else {
-        errors.push("No special character");
-        suggestions.push("Add a special character");
-    }
-
-    // Common password check
-    if (commonPasswords.includes(pwd)) {
+    if (commonPasswords.includes(pwd.toLowerCase())) {
         score -= 30;
         errors.push("Common password");
-        suggestions.push("Avoid common passwords");
     }
 
-    // Bonus for strong mix
-    if (
-        pwd.length >= 12 &&
-        /[A-Z]/.test(pwd) &&
-        /[a-z]/.test(pwd) &&
-        /\d/.test(pwd) &&
-        /[!@#$%^&*()_+\-=]/.test(pwd)
-    ) {
-        score += 10;
-    }
-
-    // Limit score between 0 and 100
     score = Math.max(0, Math.min(score, 100));
 
-    const isValid = score >= 70;
-
     return {
-        isValid,
+        isValid: score >= 70,
         score,
-        errors,
-        suggestions
+        errors
     };
-}
+};
 
-
-
-function checkFormValidity(){
-    const submit_btn=document.getElementById("submitbtn");
-    if(isUserValid && isEmailValid && isPasswordValid && isConfirmValid){
-        submit_btn.disabled=false;
-    }else{
-        submit_btn.disabled=true;
-    }
-}
+// Final form check
+const checkFormValidity = () => {
+    document.getElementById("submitbtn").disabled = !(
+        isUserValid &&
+        isEmailValid &&
+        isPasswordValid &&
+        isConfirmValid
+    );
+};
