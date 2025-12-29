@@ -1,13 +1,13 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-29 10:59
+**Review Date:** 2025-12-29 11:28
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 5
+**Files submitted:** 7
 
 ### Code Review
 
@@ -53,13 +53,35 @@
 
    **Score: 1/5**
 
-### Topic Score: 11 / 20 (55%)
+📄 **password-validator.html**
+   Path: `06-javascript/challenge-01/password-validator.html`
+   Lines: 49
+
+    - ✅ Has `<!DOCTYPE html>`
+    - 💡 Consider using semantic tags (header, nav, main, etc.)
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
+
+   **Score: 4/5**
+
+📄 **password-validator.js**
+   Path: `06-javascript/challenge-01/password-validator.js`
+   Lines: 179
+
+    - ❌ Uses `var` (2 times) - use `let`/`const`
+    - ✅ Uses strict equality (`===`)
+    - 💡 Consider using arrow functions
+    - ✅ Uses template literals
+
+   **Score: 2/5**
+
+### Topic Score: 17 / 30 (56%)
 
 ---
 
 ## Challenge
 
-**Status:** ✅ Submitted (4 files)
+**Status:** ✅ Submitted (6 files)
 
 ---
 
