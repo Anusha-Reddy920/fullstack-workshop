@@ -1,7 +1,7 @@
 # Review: 16-spring-mvc
 
 **Exercise:**  Exercise: Build a Web Application with Spring MVC
-**Review Date:** 2025-12-29 11:40
+**Review Date:** 2025-12-29 13:48
 
 ---
 
@@ -15,6 +15,8 @@
 - ❌ Missing: `application.yml`
 
 ### Code Review
+
+### Topic Score: 0 / 10 (0%)
 
 ---
 
