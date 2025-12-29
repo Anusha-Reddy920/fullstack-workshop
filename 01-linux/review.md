@@ -1,13 +1,13 @@
 # Review: 01-linux
 
 **Exercise:**  Exercise: Log File Analyzer Script
-**Review Date:** 2025-12-29 13:48
+**Review Date:** 2025-12-29 16:58
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 4
+**Files submitted:** 3
 
 ### Required Files
 
@@ -15,31 +15,19 @@
 
 ### Code Review
 
-📄 **file-organizer.sh**
-   Path: `01-linux/challenge-01/file-organizer.sh`
-   Lines: 0
-
-    - ❌ Missing shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
-    - ⚠️ No argument handling detected
-    - 💡 Consider adding more comments
-    - 💡 Consider quoting variables to handle spaces
-
-   **Score: 0/5**
-
 📄 **log-analyzer.sh**
    Path: `01-linux/log-analyzer.sh`
-   Lines: 20
+   Lines: 35
 
     - ✅ Has shebang (`#!/bin/bash`)
-    - ❌ Missing `set -e` for error handling
+    - ✅ Has error handling (`set -e`)
     - ⚠️ No argument handling detected
-    - 💡 Consider adding more comments
+    - ✅ Has comments (3 lines)
     - ✅ Variables are properly quoted
 
-   **Score: 2/5**
+   **Score: 4/5**
 
-### Topic Score: 7 / 15 (46%)
+### Topic Score: 9 / 10 (90%)
 
 ### Technical Checklist
 
@@ -55,7 +43,9 @@
 
 ## Challenge
 
-**Status:** ✅ Submitted (1 files)
+**Status:** ⚠️ Not submitted
+
+Submit to: `01-linux/challenge-01/`
 
 ---
 
