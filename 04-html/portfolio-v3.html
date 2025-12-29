@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+   
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Welcome to my Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section id="home" class="bg-secondary text-white text-center py-5 mt-5">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold">Baireddy Anusha Reddy</h1>
+        <p class="lead">Full Stack Developer</p>
+        <a href="#projects" class="btn btn-light btn-lg mt-3">View My Work</a>
+    </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJpjxdqM1-8r5oAc6JNoyvTey_OllX3z0Ivg&s" class="img-fluid rounded" alt="Profile Image" width="200" height="200">
+            </div>
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>
+                     My name is Anusha, and I am a beginner web developer who is passionate about learning how websites are built. 
+                     I am currently focusing on understanding the basics of HTML and creating simple, well-structured web pages.
+                </p>
+                <h5>Skills</h5>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>Bootstrap 5</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Design</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<section id="projects" class="py-5 bg-secondary">
+    <div class="container">
+        <h2 class="text-center mb-5 text-white">Projects</h2>
+
+        <div class="row g-4">
+            <!-- Project Card -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Project One</h5>
+                        <p class="card-text">Building my portfolio website</p>
+                        <span class="badge bg-secondary text-white">HTML</span>
+                        <span class="badge bg-secondary text-white">CSS</span>
+                        <span class="badge bg-secondary text-white">Bootstrap</span>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat for 6 projects -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Two</h5>
+                        <p class="card-text">3-Teir Architecture using nsg</p>
+                        <span class="badge bg-secondary text-white">Azure</span>
+                        <span class="badge bg-secondary text-white">Terraform</span>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Three</h5>
+                        <p class="card-text">Image Creation using packer</p>
+                        <span class="badge bg-secondary text-white">Azure</span>
+                        <span class="badge bg-secondary text-white">Terraform</span>
+                         <span class="badge bg-secondary text-white">Packer</span>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Me</h2>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h5>Contact Info</h5>
+                <p>Email: anushareddy6353@gmail.com</p>
+                <p>Phone: 8121385474</p>
+                <p>Location: Visakhapatnam</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-4 mb-3">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6>Social Media</h6>
+                <p>LinkedIn | GitHub</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <p class="mb-0">&copy; 2025 B Anusha Reddy. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
