@@ -1,93 +1,82 @@
-let isUserValid=false;
-let isEmailValid=false;
-let isPasswordValid=false;
-let isConfirmValid=false;
+let isUserValid = false;
+let isEmailValid = false;
+let isPasswordValid = false;
+let isConfirmValid = false;
 
+// Elements
+const userInput = document.getElementById("user");
+const emailInput = document.getElementById("email");
+const pwdInput = document.getElementById("pwd");
+const confirmPwdInput = document.getElementById("confirm-pwd");
 
-const user1 = document.getElementById("user");
-const p1 = document.getElementById("userV");
-user1.addEventListener("blur",function(){
- const user_V1 = user1.value;
- const regex =  /^[a-zA-Z0-9]{3,15}$/;
- userV.style.color = 'red';
- if(regex.test(user_V1)){
-     console.log("its right");  
-       isUserValid=true;
-    }else{
-     p1.textContent = 'username must be 3-15 characters (letters & numbers only)';
-    console.log(p1.textContent);
-      isUserValid=false;
- }
-   checkFormValidity();
-    console.log(user_V1);
+const userMsg = document.getElementById("userV");
+const emailMsg = document.getElementById("emailV");
+const pwdMsg = document.getElementById("pwdV");
+const confirmMsg = document.getElementById("conpwdV");
+
+// Username
+userInput.addEventListener("blur", () => {
+    const regex = /^[a-zA-Z0-9]{3,15}$/;
+
+    if (regex.test(userInput.value)) {
+        userMsg.textContent = "";
+        isUserValid = true;
+    } else {
+        userMsg.textContent =
+            "Username must be 3–15 characters (letters & numbers only)";
+        isUserValid = false;
+    }
+    checkFormValidity();
 });
-   
 
-
-const Email1 = document.getElementById("email");
-const p2 = document.getElementById("emailV");
-Email1.addEventListener("blur",function(){
-    const email_v2 = Email1.value;
+// Email
+emailInput.addEventListener("blur", () => {
     const regex = /^[a-z0-9._%-]+@[a-z]+\.[a-z]{2,}$/;
-     emailV.style.color = 'red';
-    if(regex.test(email_v2)){
-        console.log("right email format");
-         isEmailValid=true;
-       
-    }else{
-         p2.textContent = 'invalid eamil address';
-        console.log(p2.textContent);
-         isEmailValid=false;
+
+    if (regex.test(emailInput.value)) {
+        emailMsg.textContent = "";
+        isEmailValid = true;
+    } else {
+        emailMsg.textContent = "Invalid email address";
+        isEmailValid = false;
     }
-     checkFormValidity();
-    console.log(email_v2);
+    checkFormValidity();
 });
 
-const Password1 = document.getElementById("pwd");
-const p3 = document.getElementById("pwdV");
-Password1.addEventListener("blur",function(){
-    var pwd_v3 = Password1.value;
-    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*])[A-Za-z\d!@#$%&*]{8,}$/;
-      pwdV.style.color = 'red';
-    if(regex.test(pwd_v3)){
-        console.log("password entered");
-        isPasswordValid=true;
-    }else{
-         p3.textContent = 'password must be 8+ chars, including uppercase, lowercase & number';
-        console.log(p3.textContent);
-        isPasswordValid=false;
+// Password
+pwdInput.addEventListener("blur", () => {
+    const regex =
+        /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%&*]).{8,}$/;
+
+    if (regex.test(pwdInput.value)) {
+        pwdMsg.textContent = "";
+        isPasswordValid = true;
+    } else {
+        pwdMsg.textContent =
+            "Password must be 8+ chars with uppercase, lowercase, number & symbol";
+        isPasswordValid = false;
     }
-     checkFormValidity();
-    console.log(pwd_v3);
+    checkFormValidity();
 });
 
-const conpwd1 = document.getElementById("confirm-pwd");
-const p4 = document.getElementById("conpwdV");
-conpwd1.addEventListener("blur",function(){
-    const Password1 = document.getElementById("pwd");
-     var pwd_v3 = Password1.value;
-    const con_pwd_v4 = conpwd1.value;
-     conpwdV.style.color = 'red';
-    if(pwd_v3 === con_pwd_v4){      
-        console.log("perfect");
-         isConfirmValid=true;
-    }else{
-          p4.textContent = 'Password and confirm password do not match';
-        console.log(p4.textContent);
-         isConfirmValid=false;
+// Confirm Password
+confirmPwdInput.addEventListener("blur", () => {
+    if (pwdInput.value === confirmPwdInput.value) {
+        confirmMsg.textContent = "";
+        isConfirmValid = true;
+    } else {
+        confirmMsg.textContent = "Passwords do not match";
+        isConfirmValid = false;
     }
-     checkFormValidity();
-    console.log(con_pwd_v4);
+    checkFormValidity();
 });
 
-
-
-
-function checkFormValidity(){
-    const submit_btn=document.getElementById("submitbtn");
-    if(isUserValid && isEmailValid && isPasswordValid && isConfirmValid){
-        submit_btn.disabled=false;
-    }else{
-        submit_btn.disabled=true;
-    }
-}
+// Final check
+const checkFormValidity = () => {
+    document.getElementById("submitbtn").disabled = !(
+        isUserValid &&
+        isEmailValid &&
+        isPasswordValid &&
+        isConfirmValid
+    );
+};
