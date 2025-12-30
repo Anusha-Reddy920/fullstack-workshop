@@ -1,15 +1,25 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-30 11:27
+**Review Date:** 2025-12-30 15:27
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 1
+**Files submitted:** 2
 
 ### Code Review
+
+📄 **department-stats.sql**
+   Path: `09-mysql/challenges/department-stats.sql`
+   Lines: 3
+
+    - ❌ Missing PRIMARY KEY definitions
+
+   **Score: 1/5**
+
+### Topic Score: 1 / 5 (20%)
 
 ---
 
