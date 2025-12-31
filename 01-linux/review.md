@@ -1,7 +1,7 @@
 # Review: 01-linux
 
 **Exercise:**  Exercise: Log File Analyzer Script
-**Review Date:** 2025-12-30 15:27
+**Review Date:** 2025-12-31 09:39
 
 ---
 
@@ -17,17 +17,17 @@
 
 📄 **log-analyzer.sh**
    Path: `01-linux/log-analyzer.sh`
-   Lines: 35
+   Lines: 44
 
     - ✅ Has shebang (`#!/bin/bash`)
     - ✅ Has error handling (`set -e`)
     - ⚠️ No argument handling detected
-    - ✅ Has comments (3 lines)
+    - 💡 Consider adding more comments
     - ✅ Variables are properly quoted
 
-   **Score: 4/5**
+   **Score: 3/5**
 
-### Topic Score: 9 / 10 (90%)
+### Topic Score: 8 / 10 (80%)
 
 ### Technical Checklist
 

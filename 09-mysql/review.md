@@ -1,13 +1,13 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-30 15:27
+**Review Date:** 2025-12-31 09:39
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 2
+**Files submitted:** 3
 
 ### Code Review
 
@@ -15,11 +15,26 @@
    Path: `09-mysql/challenges/department-stats.sql`
    Lines: 3
 
-    - ❌ Missing PRIMARY KEY definitions
+    - ✅ Contains 1 SELECT statement(s)
+    - 💡 Consider using JOINs for related data
+    - ✅ Uses aggregate functions
+    - ✅ Uses GROUP BY for aggregation
+    - ✅ Uses explicit column selection
 
-   **Score: 1/5**
+   **Score: 4/5**
 
-### Topic Score: 1 / 5 (20%)
+📄 **employee-hierarchy.sql**
+   Path: `09-mysql/challenges/employee-hierarchy.sql`
+   Lines: 3
+
+    - ✅ Contains 1 SELECT statement(s)
+    - ✅ Uses JOIN operations
+    - 💡 Consider using aggregate functions (COUNT, SUM, etc.)
+    - ✅ Uses explicit column selection
+
+   **Score: 3/5**
+
+### Topic Score: 7 / 10 (70%)
 
 ---
 
