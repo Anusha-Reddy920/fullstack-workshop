@@ -1,7 +1,7 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-30 15:27
+**Review Date:** 2025-12-31 10:54
 
 ---
 
@@ -9,25 +9,63 @@
 
 **Files submitted:** 2
 
-### Code Review
+### Relevance Check
 
-📄 **department-stats.sql**
-   Path: `09-mysql/challenges/department-stats.sql`
-   Lines: 3
+❌ **Submission does NOT match exercise requirements**
+   Expected keywords: customer product category order ecommerce schema queries
+   None of the expected keywords found in submission
+   **Please review the exercise requirements and resubmit**
 
-    - ❌ Missing PRIMARY KEY definitions
+### ⚠️ Review Skipped
 
-   **Score: 1/5**
+The submission does not appear to match the exercise requirements.
+Please complete the correct exercise and resubmit.
 
-### Topic Score: 1 / 5 (20%)
+### Topic Score: 0 / 100 (0%)
 
 ---
 
 ## Challenge
 
-**Status:** ⚠️ Not submitted
+**Status:** ✅ Submitted (2 files)
 
-Submit to: `09-mysql/challenge-01/`
+### Challenge Relevance Check
+
+⚠️ Submission partially matches exercise requirements
+   Found: employee department salary 
+   Missing: project assignment 
+
+### Challenge Code Review
+
+📄 **department-stats.sql**
+   Lines: 3
+
+    📋 **Challenge 1: Department Stats**
+    Expected: department, employee_count, avg_salary, max_salary
+
+    - ✅ Groups by department
+    - ✅ Counts employees (COUNT(*))
+    - ✅ Calculates average salary
+    - ✅ Finds maximum salary
+    - ✅ Filters departments with >2 employees (HAVING)
+
+   **Score: 5/5**
+
+📄 **employee-hierarchy.sql**
+   Lines: 3
+
+    📋 **Challenge 2: Employee Hierarchy**
+    Expected: employee_name, manager_name (self-join)
+
+    - ✅ Uses self-join on employees table
+    - ⚠️ Consider LEFT JOIN to show employees without managers
+    - ✅ Joins on manager_id = id
+    - ✅ Uses table aliases
+
+   **Score: 3/4**
+
+### Challenge Score: 8 / 9 (88%)
+
 
 ---
 
