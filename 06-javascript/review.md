@@ -1,7 +1,7 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-31 10:54
+**Review Date:** 2026-01-02 13:56
 
 ---
 
@@ -39,7 +39,7 @@ Unable to check - no exercise file
    **Score: 3/5**
 
 📄 **form-validator.html**
-   Path: `06-javascript/challenge-01/form-validator.html`
+   Path: `06-javascript/challenge-02/form-validator.html`
    Lines: 58
 
     - ✅ Has `<!DOCTYPE html>`
@@ -50,7 +50,7 @@ Unable to check - no exercise file
    **Score: 5/5**
 
 📄 **form-validator.js**
-   Path: `06-javascript/challenge-01/form-validator.js`
+   Path: `06-javascript/challenge-02/form-validator.js`
    Lines: 82
 
     - ✅ Uses `const`/`let` (no `var`)
@@ -62,7 +62,7 @@ Unable to check - no exercise file
    **Score: 3/5**
 
 📄 **password-validator.html**
-   Path: `06-javascript/challenge-01/password-validator.html`
+   Path: `06-javascript/challenge-03/password-validator.html`
    Lines: 62
 
     - ✅ Has `<!DOCTYPE html>`
@@ -73,7 +73,7 @@ Unable to check - no exercise file
    **Score: 5/5**
 
 📄 **password-validator.js**
-   Path: `06-javascript/challenge-01/password-validator.js`
+   Path: `06-javascript/challenge-03/password-validator.js`
    Lines: 125
 
     - ✅ Uses `const`/`let` (no `var`)
@@ -90,7 +90,7 @@ Unable to check - no exercise file
 
 ## Challenge
 
-**Status:** ✅ Submitted (6 files)
+**Status:** ✅ Submitted (2 files)
 
 ### Challenge Relevance Check
 

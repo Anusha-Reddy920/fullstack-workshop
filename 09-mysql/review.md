@@ -1,19 +1,19 @@
 # Review: 09-mysql
 
 **Exercise:**  Exercise: E-Commerce Database Design and Queries
-**Review Date:** 2025-12-31 10:54
+**Review Date:** 2026-01-02 13:56
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 2
+**Files submitted:** 7
 
 ### Relevance Check
 
 ❌ **Submission does NOT match exercise requirements**
    Expected keywords: customer product category order ecommerce schema queries
-   None of the expected keywords found in submission
+   Found only: category order 
    **Please review the exercise requirements and resubmit**
 
 ### ⚠️ Review Skipped
@@ -27,13 +27,12 @@ Please complete the correct exercise and resubmit.
 
 ## Challenge
 
-**Status:** ✅ Submitted (2 files)
+**Status:** ✅ Submitted (7 files)
 
 ### Challenge Relevance Check
 
-⚠️ Submission partially matches exercise requirements
-   Found: employee department salary 
-   Missing: project assignment 
+✅ Submission appears relevant to the exercise
+   Found keywords: employee department salary project assignment 
 
 ### Challenge Code Review
 
@@ -52,19 +51,82 @@ Please complete the correct exercise and resubmit.
    **Score: 5/5**
 
 📄 **employee-hierarchy.sql**
-   Lines: 3
+   Lines: 4
 
     📋 **Challenge 2: Employee Hierarchy**
     Expected: employee_name, manager_name (self-join)
 
     - ✅ Uses self-join on employees table
-    - ⚠️ Consider LEFT JOIN to show employees without managers
+    - ✅ Uses LEFT JOIN (handles employees without managers)
     - ✅ Joins on manager_id = id
     - ✅ Uses table aliases
 
-   **Score: 3/4**
+   **Score: 4/4**
 
-### Challenge Score: 8 / 9 (88%)
+📄 **name-formatter.sql**
+   Lines: 18
+
+    📋 **Challenge 6: Employee Name Formatter**
+    Expected: formatted_name, email, initials (string functions)
+
+    - ✅ Uses UPPER() function
+    - ✅ Uses CONCAT() for string building
+    - ✅ Uses LEFT() for initials
+    - ✅ Generates email format
+
+   **Score: 4/4**
+
+📄 **project-workload.sql**
+   Lines: 6
+
+    📋 **Challenge 3: Project Workload**
+    Expected: project_name, budget, team_size, total_hours
+
+    - ✅ Joins projects with assignments
+    - ✅ Counts team members
+    - ✅ Sums allocated hours
+    - ✅ Filters budget > 50000
+    - ✅ Orders by total hours descending
+
+   **Score: 5/5**
+
+📄 **tenure-function.sql**
+   Lines: 21
+
+    📋 **SQL Query Review**
+
+    - ✅ Contains SELECT statement
+    - ✅ Specifies table source
+
+   **Score: 2/3**
+
+📄 **top-earners.sql**
+   Lines: 5
+
+    📋 **Challenge 4: Top Earners**
+    Expected: department, name, salary, rank_in_dept (window function)
+
+    - ✅ Uses window ranking function
+    - ✅ Partitions by department
+    - ✅ Orders by salary descending
+    - ✅ Filters top 3 earners
+
+   **Score: 4/4**
+
+📄 **unassigned-resources.sql**
+   Lines: 5
+
+    📋 **Challenge 5: Unassigned Resources**
+    Expected: id, name, department (employees not in any project)
+
+    - ✅ Uses LEFT JOIN with assignments
+    - ✅ Checks for NULL (unassigned employees)
+    - ✅ References employee_id for join
+    - ✅ Selects required columns (id, name, department)
+
+   **Score: 4/4**
+
+### Challenge Score: 28 / 29 (96%)
 
 
 ---
